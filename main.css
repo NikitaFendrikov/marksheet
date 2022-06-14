@@ -1,0 +1,229 @@
+:root {
+	--yellow: #CCA969;
+	--blue: #00154f;
+	--black: #414141;
+	--white: #fcf6f5;
+	--orange: #E94301;
+}
+
+
+
+body {
+	color: var(--white);
+	background-color: var(--blue);
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+	line-height: 1.2;
+}
+
+.page-title {
+	text-align: center;
+	text-decoration: underline;
+}
+
+.another-paragraph {
+	color: green;
+}
+
+blockquote {
+	font-size: 150%;
+	text-align: center;
+	background: var(--yellow);
+	color: var(--black);
+}
+
+.rockers {
+	background: var(--black);
+	border-color: var(--yellow);
+	border-width: 5%;
+	border-style: solid;
+	padding: 1.5em;
+}
+
+
+.posts_link {
+	background: var(--yellow);
+	color: var(--blue);
+	display: block;
+	margin-bottom: 0.5%;
+}
+
+.ferguson-quote {
+	text-indent: 30px;
+}
+
+a {
+	color: var(--white);
+}
+
+.shopping-list {
+	font-weight: bold;
+	text-decoration: dotted;
+}
+
+.date {
+	color: red;
+}
+
+tr th {
+	color: orange;
+}
+
+.hollow-man--one {
+	visibility: hidden;
+}
+
+.blockquote-about-content {
+	height: 155px;
+	width: 200px;
+	overflow: scroll;
+	font-size: 200%;
+}
+
+.web-quote {
+	border-color: var(--black);
+	border-width: 5%;
+	border-style: solid;
+}
+
+.sucks p {
+	margin: 0 0 1.5em 30px;
+}
+
+.position p {
+	border: 1px solid var(--yellow);
+}
+
+.second {
+	position: relative;
+	border-color: var(--white) !important;
+	left: 20px;
+	top: 10px;
+}
+
+
+.position h2 {
+	text-align: center;
+}
+
+.relative-absolute {
+	color: var(--black);
+	background: var(--yellow);
+	height: 200px;
+	padding: 10px;
+	position: relative;
+	/* This turns the <section> into a point of reference for the <p> */
+}
+
+.relative-absolute p {
+	color: var(--white);
+	background: var(--blue);
+	color: white;
+	padding: 10px;
+	position: absolute;
+	/* This makes the <p> freely movable */
+	bottom: 10px;
+	/* 10px from the bottom */
+	left: 20px;
+	/* 20px from the left */
+}
+
+.float-magic img {
+	float: left;
+}
+
+.float-magic span {
+	clear: left;
+	display: block;
+}
+
+input:focus {
+	background: var(--yellow);
+	border-color: var(--black);
+	border-width: 2px;
+	outline: none;
+}
+
+.grads {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	gap: 1rem;
+	color: var(--black);
+}
+
+.linear-grad-example {
+	width: 200px;
+	padding: 1rem;
+	background-image: linear-gradient(to bottom right, var(--yellow), var(--white));
+}
+
+.radial-grad-example {
+	width: 200px;
+	padding: 1rem;
+	background-image: radial-gradient(var(--orange), var(--yellow));
+}
+
+.pointed-grad-example {
+	width: 200px;
+	padding: 1rem;
+	background-image: radial-gradient(closest-corner at 20px 20px, var(--orange), var(--yellow));
+}
+
+.pointed-grad-example:hover {
+	width: 200px;
+	padding: 1rem;
+	background-image: radial-gradient(farthest-side at 20px 20px, var(--orange), var(--yellow));
+}
+
+.transitions {
+
+	align-items: center;
+	display: flex;
+	margin: 20px;
+	padding: auto;
+}
+
+.transitions a {
+	margin: 20px;
+	padding: 20px;
+}
+
+.transitions a:hover {
+	background: lightgrey;
+	color: grey;
+}
+
+.transitions .with-transition {
+	transition: 1s;
+}
+
+.transitions .with-delay {
+	transition-duration: 1s;
+	transition-delay: 0.5s;
+}
+
+@keyframes around {
+	from {
+		margin-left: 100%;
+		width: 300%;
+	}
+
+	to {
+		margin-left: 0%;
+		width: 100%;
+	}
+}
+
+.loading-button {
+	width: min-content;
+	animation-duration: 3s;
+	animation-name: around;
+	animation-iteration-count: infinite;
+	background: var(--yellow);
+}
